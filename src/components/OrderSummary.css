@@ -1,0 +1,56 @@
+.order-summary {
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.order-summary-title {
+  font-size: var(--text-xl);
+}
+
+.summary-items {
+  margin: 0 0 var(--space-4);
+  padding: 0 0 var(--space-3);
+  list-style: none;
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--text-sm);
+}
+
+.summary-items li,
+.summary-rows div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-1);
+}
+
+.summary-rows {
+  margin: 0 0 var(--space-3);
+}
+
+.summary-rows dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.summary-rows .summary-total {
+  margin-top: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.summary-note {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+/* On wide screens the summary stays visible while you scroll a long cart. */
+@media (min-width: 960px) {
+  .order-summary {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-4));
+  }
+}

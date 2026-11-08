@@ -1,0 +1,25 @@
+.cart-layout {
+  display: grid;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.cart-lines {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.continue-link {
+  display: block;
+  margin-top: var(--space-3);
+  font-size: var(--text-sm);
+  text-align: center;
+}
+
+@media (min-width: 960px) {
+  .cart-layout {
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: var(--space-7);
+  }
+}

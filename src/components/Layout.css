@@ -19,7 +19,3 @@
   flex: 1;
 }
 
-/* <main> only gets focus from the skip link. It is not a control, so no ring. */
-.site-main:focus {
-  outline: none;
-}

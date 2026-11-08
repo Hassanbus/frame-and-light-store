@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router'
 import Layout from './components/Layout.jsx'
 import HomePage from './pages/HomePage.jsx'
+import CartPage from './pages/CartPage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import ProductPage from './pages/ProductPage.jsx'
 import ShopPage from './pages/ShopPage.jsx'
@@ -14,6 +15,7 @@ export default function App() {
         <Route index element={<HomePage />} />
         <Route path="shop" element={<ShopPage />} />
         <Route path="product/:id" element={<ProductPage />} />
+        <Route path="cart" element={<CartPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

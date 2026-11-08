@@ -91,3 +91,9 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Elements that only get focus from our code (tabIndex -1, like a page title after
+   "Remove") are not controls, so they do not need a focus ring. */
+[tabindex='-1']:focus {
+  outline: none;
+}
