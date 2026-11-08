@@ -1,0 +1,61 @@
+/* Phones: search on top, then category + sort side by side, then price. */
+.shop-filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.filter-search,
+.filter-price {
+  grid-column: 1 / -1;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon svg {
+  position: absolute;
+  top: 50%;
+  left: var(--space-3);
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
+}
+
+.input-with-icon .input {
+  padding-left: 2.5rem; /* room for the search icon */
+}
+
+.price-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+  /* WHY: a <legend> is not a normal flex item, so the "gap" of .field does not work
+     below it. This margin gives the same space as under the other labels. */
+  margin-top: var(--space-1);
+}
+
+/* Tablets: two rows of two. */
+@media (min-width: 768px) {
+  .shop-filters {
+    padding: var(--space-5);
+  }
+
+  .filter-search,
+  .filter-price {
+    grid-column: auto;
+  }
+}
+
+/* Desktops: everything in one row. */
+@media (min-width: 1024px) {
+  .shop-filters {
+    grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+  }
+}
