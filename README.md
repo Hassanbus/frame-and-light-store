@@ -7,7 +7,7 @@ A demo online store for photography prints, built with React and Vite.
 
 ![Screenshot of the Frame & Light home page](public/og-image.png)
 
-**Live demo:** not deployed yet. The link is added here after the first deploy.
+**Live demo:** [https://frame-and-light-store.vercel.app](https://frame-and-light-store.vercel.app)
 
 ## What it is
 
