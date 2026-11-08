@@ -1,4 +1,17 @@
-// Temporary start page. The real pages and routes are added in the next commits.
+import { Route, Routes } from 'react-router'
+import Layout from './components/Layout.jsx'
+import HomePage from './pages/HomePage.jsx'
+import NotFoundPage from './pages/NotFoundPage.jsx'
+
+// The map of the website: which URL shows which page.
+// Every page sits inside <Layout>, so all pages share the navbar and the footer.
 export default function App() {
-  return <h1>Frame &amp; Light</h1>
+  return (
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
+  )
 }

@@ -1,0 +1,16 @@
+.site-footer {
+  margin-top: auto; /* WHY: pushes the footer to the bottom on short pages */
+  padding-block: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.footer-inner p:last-child {
+  margin-bottom: 0;
+}
+
+.demo-note {
+  color: var(--color-text);
+}

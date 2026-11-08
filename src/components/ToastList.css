@@ -1,0 +1,51 @@
+.toast-list {
+  position: fixed;
+  right: var(--space-4);
+  bottom: var(--space-4);
+  left: var(--space-4);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  pointer-events: none; /* WHY: the empty box must not block clicks on the page */
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-toast-bg);
+  color: var(--color-toast-text);
+  box-shadow: var(--shadow-md);
+  pointer-events: auto;
+  animation: toast-in 200ms ease-out;
+}
+
+.toast-close {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  color: inherit;
+}
+
+.toast-close:hover {
+  background: color-mix(in srgb, currentColor 15%, transparent);
+  color: inherit;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (min-width: 768px) {
+  .toast-list {
+    left: auto;
+    width: 360px;
+  }
+}

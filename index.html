@@ -4,7 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frame &amp; Light</title>
+    <meta name="color-scheme" content="light dark" />
+    <title>Frame &amp; Light | Photography prints</title>
+    <script>
+      // Runs before React: put the saved (or the system) theme on <html> right away.
+      // WHY: without this, dark mode users would see a white flash while the app loads.
+      ;(function () {
+        var theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        try {
+          var saved = JSON.parse(localStorage.getItem('fl-theme'))
+          if (saved === 'dark' || saved === 'light') theme = saved
+        } catch (error) {
+          // localStorage is blocked or broken: keep the system theme.
+        }
+        document.documentElement.dataset.theme = theme
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>
