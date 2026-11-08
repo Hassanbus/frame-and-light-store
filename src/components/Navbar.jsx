@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router'
+import CartLink from './CartLink.jsx'
 import Icon from './Icon.jsx'
 import ThemeToggle from './ThemeToggle.jsx'
 import './Navbar.css'
@@ -56,6 +57,7 @@ export default function Navbar() {
 
         <div className="header-actions">
           <ThemeToggle />
+          <CartLink onClick={closeMenu} />
         </div>
       </div>
     </header>
