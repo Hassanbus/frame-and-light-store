@@ -1,0 +1,43 @@
+.buy-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.buy-box > * {
+  width: 100%;
+}
+
+.product-price {
+  margin: 0;
+  font-size: var(--text-2xl);
+  font-weight: 600;
+}
+
+.product-price .muted {
+  font-size: var(--text-sm);
+  font-weight: 400;
+}
+
+.buy-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.add-to-cart {
+  flex: 1 1 12rem; /* grows to fill the row, wraps below the quantity on small phones */
+}
+
+.buy-box > .wishlist-text {
+  width: auto;
+}
+
+.buy-note {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
