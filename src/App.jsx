@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import ProductPage from './pages/ProductPage.jsx'
 import ShopPage from './pages/ShopPage.jsx'
+import WishlistPage from './pages/WishlistPage.jsx'
 
 // The map of the website: which URL shows which page.
 // Every page sits inside <Layout>, so all pages share the navbar and the footer.
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="cart" element={<CartPage />} />
         <Route path="checkout" element={<CheckoutPage />} />
         <Route path="order-confirmation" element={<ConfirmationPage />} />
+        <Route path="wishlist" element={<WishlistPage />} />
         {/* "*" matches every other URL, so unknown pages show the 404 page. */}
         <Route path="*" element={<NotFoundPage />} />
       </Route>
