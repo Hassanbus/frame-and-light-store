@@ -8,6 +8,19 @@ export const CATEGORIES = ['Nature', 'City', 'Ocean', 'Mountains', 'Minimal', 'N
 // The home page shows these prints in the "Featured prints" section.
 export const FEATURED_IDS = ['blue-cliffs', 'snow-peak', 'lighthouse-stars', 'orange-tulips']
 
+// The cover photo of each category card on the home page (different from the featured prints).
+export const CATEGORY_COVERS = {
+  Nature: 'quiet-pine-forest',
+  City: 'twin-classics',
+  Ocean: 'storm-coast',
+  Mountains: 'cloud-ridge',
+  Minimal: 'dune-line',
+  Night: 'milky-way-fence',
+}
+
+// The big photo in the hero at the top of the home page.
+export const HERO_ID = 'lake-pier'
+
 export const products = [
   { id: 'quiet-pine-forest', title: 'Quiet Pine Forest', category: 'Nature', basePrice: 34, createdAt: '2026-02-14', imageSeed: 'fl-37',
     description: 'Tall pines stand in soft green light. A calm print for a bedroom or a reading corner.' },

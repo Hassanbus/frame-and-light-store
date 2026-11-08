@@ -1,4 +1,4 @@
-/* Base styles: a small reset, plain HTML elements and a few shared layout classes. */
+/* Base styles: a small reset and the default look of plain HTML elements. */
 
 *,
 *::before,
@@ -80,44 +80,6 @@ button {
 :focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 2px;
-}
-
-.container {
-  width: 100%;
-  max-width: var(--container);
-  margin-inline: auto;
-  padding-inline: var(--space-4);
-}
-
-.page {
-  padding-block: var(--space-6) var(--space-8);
-}
-
-.page-header {
-  margin-bottom: var(--space-6);
-}
-
-.muted {
-  color: var(--color-text-muted);
-}
-
-/* Hidden on screen, but still read by screen readers. */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-@media (min-width: 768px) {
-  .container {
-    padding-inline: var(--space-6);
-  }
 }
 
 /* Respect users who asked their system for less motion. */

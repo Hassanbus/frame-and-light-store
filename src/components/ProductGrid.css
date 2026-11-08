@@ -1,0 +1,28 @@
+/* Mobile first: 2 columns, then 3 on tablets and 4 on desktops. */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6) var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-7) var(--space-5);
+  }
+
+  /* A list of exactly 4 prints keeps 2 columns on tablets (2 + 2 instead of 3 + 1). */
+  .product-grid-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-grid,
+  .product-grid-four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

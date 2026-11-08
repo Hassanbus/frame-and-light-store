@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { getImageSrc, getProductById, getRelatedProducts } from './catalog.js'
+import { getAltText, getImageSrc, getProductById, getRelatedProducts } from './catalog.js'
 
 const fakeProducts = [
   { id: 'a', category: 'Ocean' },
@@ -33,5 +33,11 @@ describe('getRelatedProducts', () => {
 describe('getImageSrc', () => {
   it('builds the local image path for a width', () => {
     expect(getImageSrc({ imageSeed: 'fl-14' }, 600)).toBe('/images/fl-14-600.jpg')
+  })
+})
+
+describe('getAltText', () => {
+  it('uses the first sentence of the description', () => {
+    expect(getAltText({ description: 'A red door. Very nice.' })).toBe('A red door')
   })
 })

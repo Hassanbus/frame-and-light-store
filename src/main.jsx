@@ -1,3 +1,10 @@
+// WHY the global CSS comes first: CSS that loads later wins when two rules are
+// equally strong. Components import their own CSS, which must be able to
+// override these shared styles, so the shared styles must load before them.
+import './styles/tokens.css'
+import './styles/base.css'
+import './styles/layout.css'
+import './styles/buttons.css'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router'
@@ -6,9 +13,6 @@ import ScrollToTop from './components/ScrollToTop.jsx'
 import CartProvider from './context/CartProvider.jsx'
 import ToastProvider from './context/ToastProvider.jsx'
 import WishlistProvider from './context/WishlistProvider.jsx'
-import './styles/tokens.css'
-import './styles/base.css'
-import './styles/buttons.css'
 
 // The starting point of the app.
 // WHY this order: the router is on the outside, so every part of the app can use links.

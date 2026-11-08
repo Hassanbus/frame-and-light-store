@@ -1,0 +1,14 @@
+/* Round heart on top of a photo. A light background keeps it visible on any photo. */
+.wishlist-icon {
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  box-shadow: var(--shadow-sm);
+}
+
+.wishlist-icon:hover {
+  background: var(--color-surface);
+}
+
+.wishlist-icon.is-saved,
+.wishlist-text svg {
+  color: var(--color-accent);
+}

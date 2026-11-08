@@ -18,3 +18,9 @@ export function getRelatedProducts(product, all = products, limit = 4) {
 export function getImageSrc(product, width) {
   return `/images/${product.imageSeed}-${width}.jpg`
 }
+
+// The first sentence of every description says what is IN the photo,
+// so it is a good alt text for screen reader users.
+export function getAltText(product) {
+  return product.description.split('. ')[0]
+}
