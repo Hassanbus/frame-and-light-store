@@ -2,10 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark" />
     <title>Frame &amp; Light | Photography prints</title>
+    <meta
+      name="description"
+      content="Frame &amp; Light is a demo online store for photography prints, built with React and Vite. The brand is fictional: nothing is for sale."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#faf9f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#161412" media="(prefers-color-scheme: dark)" />
+
+    <!-- Open Graph: the title, text and picture that chat apps and social sites show for a shared link. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Frame &amp; Light" />
+    <meta property="og:title" content="Frame &amp; Light | Photography prints (demo store)" />
+    <meta
+      property="og:description"
+      content="A demo online store for photography prints: search, filters, cart, wishlist, checkout and dark mode. Built with React and Vite."
+    />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="The Frame &amp; Light home page: a big headline next to a framed photo of a lake pier." />
+    <meta name="twitter:card" content="summary_large_image" />
+
     <script>
       // Runs before React: put the saved (or the system) theme on <html> right away.
       // WHY: without this, dark mode users would see a white flash while the app loads.
@@ -22,6 +43,7 @@
     </script>
   </head>
   <body>
+    <noscript>Frame &amp; Light is a React app. Please turn on JavaScript to see the store.</noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
