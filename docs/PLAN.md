@@ -107,7 +107,19 @@ skip link, everything works with the keyboard, `aria-live` region for toasts,
 11. Meta tags, Open Graph image, vercel.json
 12. README and docs/HOW_IT_WORKS.md
 
-## 9. Publish
+## 9. What changed while building
+
+The plan above was written before coding. A few things changed, on purpose:
+
+- Component names: `CartBadge` became `CartLink`, the skip link and mobile menu live inside
+  `Layout` and `Navbar`, and `SortSelect` is part of `ShopFilters`. `PriceTag` was not needed.
+- New small components: `BuyBox`, `CartLine`, `OrderSummary`, `ProductImage`, `Hero`, `Icon`.
+- Styles are split into `tokens.css`, `base.css`, `layout.css`, `buttons.css` and `forms.css`.
+- `BrowserRouter` uses `useTransitions={false}`: a browser test showed that quick filter changes
+  could use old URL values when React Router updates run as transitions.
+- `scroll-padding-top` was added so the sticky header never covers a focused form field.
+
+## 10. Publish
 
 GitHub repo `frame-and-light-store` (public) with `gh`, then deploy to Vercel with
 `npx vercel --prod --yes`, then check `/`, `/shop` and `/cart` return HTTP 200.

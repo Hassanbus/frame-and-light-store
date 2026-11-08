@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 import { useCart } from '../context/cartContext.js'
 import Icon from './Icon.jsx'
+import './CartLink.css'
 
 // The bag icon in the navbar, with a small badge that shows how many prints are in the cart.
 export default function CartLink({ onClick }) {

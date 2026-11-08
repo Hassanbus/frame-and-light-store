@@ -28,7 +28,6 @@ const SHAPES = {
   ),
   minus: <path d="M6 12h12" />,
   plus: <path d="M12 6v12M6 12h12" />,
-  trash: <path d="M4.5 7h15M10 11v6M14 11v6M6.5 7l1 13h9l1-13M9.5 7V4.5h5V7" />,
   arrow: <path d="M5 12h14M13 6l6 6-6 6" />,
   check: <path d="M5 12.5l4.5 4.5L19 7.5" />,
 }
