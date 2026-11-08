@@ -1,0 +1,51 @@
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.checkout-section legend {
+  margin-bottom: var(--space-4);
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 600;
+}
+
+.checkout-fields {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.payment-option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  cursor: pointer;
+}
+
+.payment-option input {
+  width: 18px;
+  height: 18px;
+  margin: 0.2rem 0 0;
+  accent-color: var(--color-accent);
+}
+
+.payment-option strong {
+  display: block;
+}
+
+/* Tablets and up: e-mail + phone side by side, city next to nothing (short field). */
+@media (min-width: 768px) {
+  .checkout-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .checkout-fields .field:nth-child(1),
+  .checkout-fields .field:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+}

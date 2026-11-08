@@ -1,0 +1,12 @@
+.checkout-layout {
+  display: grid;
+  gap: var(--space-7);
+  align-items: start;
+  margin-top: var(--space-6);
+}
+
+@media (min-width: 960px) {
+  .checkout-layout {
+    grid-template-columns: minmax(0, 1fr) 380px;
+  }
+}

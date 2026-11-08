@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+/* WHY: the header is sticky. When the browser scrolls to a focused field or to a
+   #link target, this space keeps the element below the header, not hidden under it. */
+html {
+  scroll-padding-top: calc(var(--header-height) + var(--space-4));
+}
+
 body {
   margin: 0;
   font-family: var(--font-sans);

@@ -21,8 +21,6 @@
 
 .section {
   padding-block: var(--space-7);
-  /* WHY: when a link jumps to a section, the sticky header must not cover its title. */
-  scroll-margin-top: var(--header-height);
 }
 
 .section-header {
@@ -69,4 +67,14 @@
   .container {
     padding-inline: var(--space-6);
   }
+}
+
+/* The "this is a demo" box on the checkout and confirmation pages. */
+.demo-banner {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-accent);
+  border-left-width: 4px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--color-accent) 8%, var(--color-surface));
 }

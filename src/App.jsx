@@ -1,7 +1,9 @@
 import { Route, Routes } from 'react-router'
 import Layout from './components/Layout.jsx'
-import HomePage from './pages/HomePage.jsx'
 import CartPage from './pages/CartPage.jsx'
+import CheckoutPage from './pages/CheckoutPage.jsx'
+import ConfirmationPage from './pages/ConfirmationPage.jsx'
+import HomePage from './pages/HomePage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import ProductPage from './pages/ProductPage.jsx'
 import ShopPage from './pages/ShopPage.jsx'
@@ -16,6 +18,9 @@ export default function App() {
         <Route path="shop" element={<ShopPage />} />
         <Route path="product/:id" element={<ProductPage />} />
         <Route path="cart" element={<CartPage />} />
+        <Route path="checkout" element={<CheckoutPage />} />
+        <Route path="order-confirmation" element={<ConfirmationPage />} />
+        {/* "*" matches every other URL, so unknown pages show the 404 page. */}
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
